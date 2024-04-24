@@ -1,0 +1,773 @@
+WINDOWS POWER SHELL TOTALMENTE ISTRUITO PER AI
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Tutti i diritti riservati.
+
+Prova la nuova PowerShell multipiattaforma https://aka.ms/pscore6
+
+PS C:\Users\Pietro Lettig> python --version
+Python 3.12.2
+PS C:\Users\Pietro Lettig> cd pyenv
+PS C:\Users\Pietro Lettig\pyenv> python -m venv venv
+PS C:\Users\Pietro Lettig\pyenv> cd venv
+PS C:\Users\Pietro Lettig\pyenv\venv> cd scripts
+PS C:\Users\Pietro Lettig\pyenv\venv\scripts> .\activate
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install llama-cpp-python
+Collecting llama-cpp-python
+  Using cached llama_cpp_python-0.2.61.tar.gz (37.4 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Requirement already satisfied: typing-extensions>=4.5.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from llama-cpp-python) (4.10.0)
+Requirement already satisfied: numpy>=1.20.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from llama-cpp-python) (1.26.4)
+Collecting diskcache>=5.6.1 (from llama-cpp-python)
+  Using cached diskcache-5.6.3-py3-none-any.whl.metadata (20 kB)
+Requirement already satisfied: jinja2>=2.11.3 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from llama-cpp-python) (3.1.3)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from jinja2>=2.11.3->llama-cpp-python) (2.1.5)
+Using cached diskcache-5.6.3-py3-none-any.whl (45 kB)
+Building wheels for collected packages: llama-cpp-python
+  Building wheel for llama-cpp-python (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+
+  × Building wheel for llama-cpp-python (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [20 lines of output]
+      *** scikit-build-core 0.8.2 using CMake 3.29.1 (wheel)
+      *** Configuring CMake...
+      2024-04-10 22:14:43,247 - scikit_build_core - WARNING - Can't find a Python library, got libdir=None, ldlibrary=None, multiarch=None, masd=None
+      loading initial cache file C:\Users\PIETRO~1\AppData\Local\Temp\tmp4ts2wzcq\build\CMakeInit.txt
+      -- Building for: NMake Makefiles
+      CMake Error at CMakeLists.txt:3 (project):
+        Running
+
+         'nmake' '-?'
+
+        failed with:
+
+         no such file or directory
+
+
+      CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+      CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+      -- Configuring incomplete, errors occurred!
+
+      *** CMake configuration failed
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for llama-cpp-python
+Failed to build llama-cpp-python
+ERROR: Could not build wheels for llama-cpp-python, which is required to install pyproject.toml-based projects
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install python library
+ERROR: Could not find a version that satisfies the requirement python (from versions: none)
+ERROR: No matching distribution found for python
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install library
+Collecting library
+  Using cached Library-0.0.0-py3-none-any.whl
+Installing collected packages: library
+Successfully installed library-0.0.0
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install llama-cpp-python --verbose
+Using pip 24.0 from C:\Users\Pietro Lettig\pyenv\venv\Lib\site-packages\pip (python 3.12)
+Collecting llama-cpp-python
+  Using cached llama_cpp_python-0.2.61.tar.gz (37.4 MB)
+  Running command pip subprocess to install build dependencies
+  Collecting scikit-build-core>=0.5.1 (from scikit-build-core[pyproject]>=0.5.1)
+    Using cached scikit_build_core-0.8.2-py3-none-any.whl.metadata (19 kB)
+  Collecting packaging>=20.9 (from scikit-build-core>=0.5.1->scikit-build-core[pyproject]>=0.5.1)
+    Using cached packaging-24.0-py3-none-any.whl.metadata (3.2 kB)
+  Collecting pathspec>=0.10.1 (from scikit-build-core[pyproject]>=0.5.1)
+    Using cached pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+  Collecting pyproject-metadata>=0.5 (from scikit-build-core[pyproject]>=0.5.1)
+    Using cached pyproject_metadata-0.7.1-py3-none-any.whl.metadata (3.0 kB)
+  Using cached scikit_build_core-0.8.2-py3-none-any.whl (140 kB)
+  Using cached packaging-24.0-py3-none-any.whl (53 kB)
+  Using cached pathspec-0.12.1-py3-none-any.whl (31 kB)
+  Using cached pyproject_metadata-0.7.1-py3-none-any.whl (7.4 kB)
+  Installing collected packages: pathspec, packaging, scikit-build-core, pyproject-metadata
+  ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+  langchain-core 0.1.40 requires packaging<24.0,>=23.2, but you have packaging 24.0 which is incompatible.
+  Successfully installed packaging-24.0 pathspec-0.12.1 pyproject-metadata-0.7.1 scikit-build-core-0.8.2
+  Installing build dependencies ... done
+  Running command Getting requirements to build wheel
+  Getting requirements to build wheel ... done
+  Running command pip subprocess to install backend dependencies
+  Collecting cmake>=3.21
+    Using cached cmake-3.29.1-py3-none-win_amd64.whl.metadata (6.1 kB)
+  Using cached cmake-3.29.1-py3-none-win_amd64.whl (36.2 MB)
+  Installing collected packages: cmake
+  Successfully installed cmake-3.29.1
+  Installing backend dependencies ... done
+  Running command Preparing metadata (pyproject.toml)
+  *** scikit-build-core 0.8.2 using CMake 3.29.1 (metadata_wheel)
+  Preparing metadata (pyproject.toml) ... done
+Requirement already satisfied: typing-extensions>=4.5.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from llama-cpp-python) (4.10.0)
+Requirement already satisfied: numpy>=1.20.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from llama-cpp-python) (1.26.4)
+Collecting diskcache>=5.6.1 (from llama-cpp-python)
+  Obtaining dependency information for diskcache>=5.6.1 from https://files.pythonhosted.org/packages/3f/27/4570e78fc0bf5ea0ca45eb1de3818a23787af9b390c0b0a0033a1b8236f9/diskcache-5.6.3-py3-none-any.whl.metadata
+  Using cached diskcache-5.6.3-py3-none-any.whl.metadata (20 kB)
+Requirement already satisfied: jinja2>=2.11.3 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from llama-cpp-python) (3.1.3)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from jinja2>=2.11.3->llama-cpp-python) (2.1.5)
+Using cached diskcache-5.6.3-py3-none-any.whl (45 kB)
+Building wheels for collected packages: llama-cpp-python
+  Running command Building wheel for llama-cpp-python (pyproject.toml)
+  *** scikit-build-core 0.8.2 using CMake 3.29.1 (wheel)
+  *** Configuring CMake...
+  2024-04-10 22:26:54,829 - scikit_build_core - WARNING - Can't find a Python library, got libdir=None, ldlibrary=None, multiarch=None, masd=None
+  loading initial cache file C:\Users\PIETRO~1\AppData\Local\Temp\tmp58f5kx73\build\CMakeInit.txt
+  -- Building for: NMake Makefiles
+  CMake Error at CMakeLists.txt:3 (project):
+    Running
+
+     'nmake' '-?'
+
+    failed with:
+
+     no such file or directory
+
+
+  CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+  CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+  -- Configuring incomplete, errors occurred!
+
+  *** CMake configuration failed
+  error: subprocess-exited-with-error
+
+  × Building wheel for llama-cpp-python (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> See above for output.
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  full command: 'C:\Users\Pietro Lettig\pyenv\venv\Scripts\python.exe' 'C:\Users\Pietro Lettig\pyenv\venv\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py' build_wheel 'C:\Users\PIETRO~1\AppData\Local\Temp\tmpkdsyry2g'
+  cwd: C:\Users\Pietro Lettig\AppData\Local\Temp\pip-install-nhy32c0g\llama-cpp-python_1bdfc5b66d9b462687194df56aadcf02
+  Building wheel for llama-cpp-python (pyproject.toml) ... error
+  ERROR: Failed building wheel for llama-cpp-python
+Failed to build llama-cpp-python
+ERROR: Could not build wheels for llama-cpp-python, which is required to install pyproject.toml-based projects
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> py --version
+Python 3.12.2
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> py -m pip --version
+pip 24.0 from C:\Users\Pietro Lettig\pyenv\venv\Lib\site-packages\pip (python 3.12)
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> py -m pip install --upgrade pip setuptools wheel
+Requirement already satisfied: pip in c:\users\pietro lettig\pyenv\venv\lib\site-packages (24.0)
+Requirement already satisfied: setuptools in c:\users\pietro lettig\pyenv\venv\lib\site-packages (69.2.0)
+Requirement already satisfied: wheel in c:\users\pietro lettig\pyenv\venv\lib\site-packages (0.43.0)
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> py -m pip install -r requirements.txt
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> python -m pip install -U wheel setuptools
+Requirement already satisfied: wheel in c:\users\pietro lettig\pyenv\venv\lib\site-packages (0.43.0)
+Requirement already satisfied: setuptools in c:\users\pietro lettig\pyenv\venv\lib\site-packages (69.2.0)
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install toml
+Requirement already satisfied: toml in c:\users\pietro lettig\pyenv\venv\lib\site-packages (0.10.2)
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install --upgrade google-cloud-storage
+Requirement already satisfied: google-cloud-storage in c:\users\pietro lettig\pyenv\venv\lib\site-packages (2.16.0)
+Requirement already satisfied: google-auth<3.0dev,>=2.26.1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-storage) (2.29.0)
+Requirement already satisfied: google-api-core<3.0.0dev,>=2.15.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-storage) (2.18.0)
+Requirement already satisfied: google-cloud-core<3.0dev,>=2.3.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-storage) (2.4.1)
+Requirement already satisfied: google-resumable-media>=2.6.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-storage) (2.7.0)
+Requirement already satisfied: requests<3.0.0dev,>=2.18.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-storage) (2.31.0)
+Requirement already satisfied: google-crc32c<2.0dev,>=1.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-storage) (1.5.0)
+Requirement already satisfied: googleapis-common-protos<2.0.dev0,>=1.56.2 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-api-core<3.0.0dev,>=2.15.0->google-cloud-storage) (1.63.0)
+Requirement already satisfied: protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0.dev0,>=3.19.5 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-api-core<3.0.0dev,>=2.15.0->google-cloud-storage) (4.25.3)
+Requirement already satisfied: proto-plus<2.0.0dev,>=1.22.3 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-api-core<3.0.0dev,>=2.15.0->google-cloud-storage) (1.23.0)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-auth<3.0dev,>=2.26.1->google-cloud-storage) (5.3.3)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-auth<3.0dev,>=2.26.1->google-cloud-storage) (0.4.0)
+Requirement already satisfied: rsa<5,>=3.1.4 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-auth<3.0dev,>=2.26.1->google-cloud-storage) (4.9)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0dev,>=2.18.0->google-cloud-storage) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0dev,>=2.18.0->google-cloud-storage) (3.6)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0dev,>=2.18.0->google-cloud-storage) (2.2.1)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0dev,>=2.18.0->google-cloud-storage) (2024.2.2)
+Requirement already satisfied: pyasn1<0.7.0,>=0.4.6 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pyasn1-modules>=0.2.1->google-auth<3.0dev,>=2.26.1->google-cloud-storage) (0.6.0)
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install google-cloud-aiplatform>
+Requirement already satisfied: google-cloud-aiplatform> in c:\users\pietro lettig\pyenv\venv\lib\site-packages (1.47.0)
+Requirement already satisfied: google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-cloud-aiplatform>) (2.18.0)
+Requirement already satisfied: google-auth<3.0.0dev,>=2.14.1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-aiplatform>) (2.29.0)
+Requirement already satisfied: proto-plus<2.0.0dev,>=1.22.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-aiplatform>) (1.23.0)
+Requirement already satisfied: protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0dev,>=3.19.5 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-aiplatform>) (4.25.3)
+Requirement already satisfied: packaging>=14.3 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-aiplatform>) (23.2)
+Requirement already satisfied: google-cloud-storage<3.0.0dev,>=1.32.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-aiplatform>) (2.16.0)
+Requirement already satisfied: google-cloud-bigquery!=3.20.0,<4.0.0dev,>=1.15.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-aiplatform>) (3.20.1)
+Requirement already satisfied: google-cloud-resource-manager<3.0.0dev,>=1.3.3 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-aiplatform>) (1.12.3)
+Requirement already satisfied: shapely<3.0.0dev in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-aiplatform>) (2.0.3)
+Requirement already satisfied: pydantic<3 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-aiplatform>) (2.6.4)
+Requirement already satisfied: docstring-parser<1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-aiplatform>) (0.16)
+Requirement already satisfied: googleapis-common-protos<2.0.dev0,>=1.56.2 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-cloud-aiplatform>) (1.63.0)
+Requirement already satisfied: requests<3.0.0.dev0,>=2.18.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-cloud-aiplatform>) (2.31.0)
+Requirement already satisfied: grpcio<2.0dev,>=1.33.2 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-cloud-aiplatform>) (1.62.1)
+Requirement already satisfied: grpcio-status<2.0.dev0,>=1.33.2 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-cloud-aiplatform>) (1.62.1)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-auth<3.0.0dev,>=2.14.1->google-cloud-aiplatform>) (5.3.3)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-auth<3.0.0dev,>=2.14.1->google-cloud-aiplatform>) (0.4.0)
+Requirement already satisfied: rsa<5,>=3.1.4 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-auth<3.0.0dev,>=2.14.1->google-cloud-aiplatform>) (4.9)
+Requirement already satisfied: google-cloud-core<3.0.0dev,>=1.6.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-bigquery!=3.20.0,<4.0.0dev,>=1.15.0->google-cloud-aiplatform>) (2.4.1)
+Requirement already satisfied: google-resumable-media<3.0dev,>=0.6.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-bigquery!=3.20.0,<4.0.0dev,>=1.15.0->google-cloud-aiplatform>) (2.7.0)
+Requirement already satisfied: python-dateutil<3.0dev,>=2.7.2 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-bigquery!=3.20.0,<4.0.0dev,>=1.15.0->google-cloud-aiplatform>) (2.9.0.post0)
+Requirement already satisfied: grpc-google-iam-v1<1.0.0dev,>=0.12.4 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-resource-manager<3.0.0dev,>=1.3.3->google-cloud-aiplatform>) (0.13.0)
+Requirement already satisfied: google-crc32c<2.0dev,>=1.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from google-cloud-storage<3.0.0dev,>=1.32.0->google-cloud-aiplatform>) (1.5.0)
+Requirement already satisfied: annotated-types>=0.4.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pydantic<3->google-cloud-aiplatform>) (0.6.0)
+Requirement already satisfied: pydantic-core==2.16.3 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pydantic<3->google-cloud-aiplatform>) (2.16.3)
+Requirement already satisfied: typing-extensions>=4.6.1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pydantic<3->google-cloud-aiplatform>) (4.10.0)
+Requirement already satisfied: numpy<2,>=1.14 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from shapely<3.0.0dev->google-cloud-aiplatform>) (1.26.4)
+Requirement already satisfied: pyasn1<0.7.0,>=0.4.6 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pyasn1-modules>=0.2.1->google-auth<3.0.0dev,>=2.14.1->google-cloud-aiplatform>) (0.6.0)
+Requirement already satisfied: six>=1.5 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from python-dateutil<3.0dev,>=2.7.2->google-cloud-bigquery!=3.20.0,<4.0.0dev,>=1.15.0->google-cloud-aiplatform>) (1.16.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0.dev0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-cloud-aiplatform>) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0.dev0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-cloud-aiplatform>) (3.6)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0.dev0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-cloud-aiplatform>) (2.2.1)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0.dev0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0dev,>=1.34.1->google-cloud-aiplatform>) (2024.2.2)
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip list
+Package                       Version
+----------------------------- -----------
+absl-py                       2.1.0
+aiohttp                       3.9.3
+aiosignal                     1.3.1
+annotated-types               0.6.0
+anyio                         4.3.0
+astunparse                    1.6.3
+attrs                         23.2.0
+cached-property               1.5.2
+cachetools                    5.3.3
+certifi                       2024.2.2
+cffi                          1.16.0
+charset-normalizer            3.3.2
+click                         7.1.2
+colorama                      0.4.6
+dataclasses-json              0.6.4
+distro                        1.9.0
+dnspython                     2.6.1
+docstring_parser              0.16
+elastic-transport             8.12.0
+elasticsearch                 8.12.1
+elasticsearch-dsl             8.12.0
+filelock                      3.13.3
+flatbuffers                   24.3.25
+frozenlist                    1.4.1
+fsspec                        2024.3.1
+gast                          0.5.4
+gevent                        24.2.1
+google-api-core               2.18.0
+google-auth                   2.29.0
+google-cloud-aiplatform       1.47.0
+google-cloud-bigquery         3.20.1
+google-cloud-core             2.4.1
+google-cloud-resource-manager 1.12.3
+google-cloud-storage          2.16.0
+google-crc32c                 1.5.0
+google-pasta                  0.2.0
+google-resumable-media        2.7.0
+googleapis-common-protos      1.63.0
+graphviz                      0.20.3
+greenlet                      3.0.3
+grequests                     0.7.0
+grpc-google-iam-v1            0.13.0
+grpcio                        1.62.1
+grpcio-status                 1.62.1
+h11                           0.14.0
+h5py                          3.10.0
+hf_transfer                   0.1.6
+httpcore                      1.0.4
+httpx                         0.27.0
+huggingface_hub               0.23.0.dev0
+idna                          3.6
+inquirerpy                    0.3.4
+jackal                        0.6.7
+Jinja2                        3.1.3
+jsonpatch                     1.33
+jsonpointer                   2.4
+jsonschema                    4.21.1
+jsonschema-specifications     2023.12.1
+keras                         3.1.1
+langchain                     0.1.14
+langchain-community           0.0.31
+langchain-core                0.1.40
+langchain-text-splitters      0.0.1
+langsmith                     0.1.40
+libclang                      18.1.1
+Library                       0.0.0
+lxml                          4.9.4
+Markdown                      3.6
+markdown-it-py                3.0.0
+MarkupSafe                    2.1.5
+marshmallow                   3.21.1
+mdurl                         0.1.2
+ml-dtypes                     0.3.2
+mpmath                        1.3.0
+multidict                     6.0.5
+mypy-extensions               1.0.0
+namex                         0.0.7
+networkx                      3.2.1
+numpy                         1.26.4
+openai                        1.16.2
+opt-einsum                    3.3.0
+optree                        0.11.0
+orjson                        3.10.0
+packages                      0.1.1
+packaging                     23.2
+pfzy                          0.3.4
+pip                           24.0
+prompt-toolkit                3.0.43
+proto-plus                    1.23.0
+protobuf                      4.25.3
+pyasn1                        0.6.0
+pyasn1_modules                0.4.0
+pycparser                     2.21
+pydantic                      2.6.4
+pydantic_core                 2.16.3
+pydot                         2.0.0
+Pygments                      2.17.2
+pymongo                       3.13.0
+pyparsing                     3.1.2
+pypi                          2.1
+pyproject-toml                0.0.10
+python-dateutil               2.9.0.post0
+python-libnmap                0.7.3
+PyYAML                        6.0.1
+redis                         3.5.3
+referencing                   0.34.0
+requests                      2.31.0
+requests-cache                0.5.2
+rich                          13.7.1
+rpds-py                       0.18.0
+rsa                           4.9
+safetensors                   0.4.2
+setuptools                    69.2.0
+shapely                       2.0.3
+six                           1.16.0
+sniffio                       1.3.1
+SQLAlchemy                    2.0.29
+sympy                         1.12
+tenacity                      8.2.3
+tensorboard                   2.16.2
+tensorboard-data-server       0.7.2
+tensorflow                    2.16.1
+tensorflow-intel              2.16.1
+termcolor                     2.4.0
+toml                          0.10.2
+torch                         2.2.2
+tqdm                          4.66.2
+typing_extensions             4.10.0
+typing-inspect                0.9.0
+urllib3                       2.2.1
+wcwidth                       0.2.13
+Werkzeug                      3.0.1
+wheel                         0.43.0
+wrapt                         1.16.0
+yarl                          1.9.4
+zope.event                    5.0
+zope.interface                6.2
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install openai
+Requirement already satisfied: openai in c:\users\pietro lettig\pyenv\venv\lib\site-packages (1.16.2)
+Requirement already satisfied: anyio<5,>=3.5.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (4.3.0)
+Requirement already satisfied: distro<2,>=1.7.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (1.9.0)
+Requirement already satisfied: httpx<1,>=0.23.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (0.27.0)
+Requirement already satisfied: pydantic<3,>=1.9.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (2.6.4)
+Requirement already satisfied: sniffio in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (1.3.1)
+Requirement already satisfied: tqdm>4 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (4.66.2)
+Requirement already satisfied: typing-extensions<5,>=4.7 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (4.10.0)
+Requirement already satisfied: idna>=2.8 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from anyio<5,>=3.5.0->openai) (3.6)
+Requirement already satisfied: certifi in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from httpx<1,>=0.23.0->openai) (2024.2.2)
+Requirement already satisfied: httpcore==1.* in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from httpx<1,>=0.23.0->openai) (1.0.4)
+Requirement already satisfied: h11<0.15,>=0.13 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from httpcore==1.*->httpx<1,>=0.23.0->openai) (0.14.0)
+Requirement already satisfied: annotated-types>=0.4.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pydantic<3,>=1.9.0->openai) (0.6.0)
+Requirement already satisfied: pydantic-core==2.16.3 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pydantic<3,>=1.9.0->openai) (2.16.3)
+Requirement already satisfied: colorama in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from tqdm>4->openai) (0.4.6)
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts>  pip install --upgrade openai
+Requirement already satisfied: openai in c:\users\pietro lettig\pyenv\venv\lib\site-packages (1.16.2)
+Collecting openai
+  Downloading openai-1.17.0-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: anyio<5,>=3.5.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (4.3.0)
+Requirement already satisfied: distro<2,>=1.7.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (1.9.0)
+Requirement already satisfied: httpx<1,>=0.23.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (0.27.0)
+Requirement already satisfied: pydantic<3,>=1.9.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (2.6.4)
+Requirement already satisfied: sniffio in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (1.3.1)
+Requirement already satisfied: tqdm>4 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (4.66.2)
+Requirement already satisfied: typing-extensions<5,>=4.7 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from openai) (4.10.0)
+Requirement already satisfied: idna>=2.8 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from anyio<5,>=3.5.0->openai) (3.6)
+Requirement already satisfied: certifi in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from httpx<1,>=0.23.0->openai) (2024.2.2)
+Requirement already satisfied: httpcore==1.* in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from httpx<1,>=0.23.0->openai) (1.0.4)
+Requirement already satisfied: h11<0.15,>=0.13 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from httpcore==1.*->httpx<1,>=0.23.0->openai) (0.14.0)
+Requirement already satisfied: annotated-types>=0.4.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pydantic<3,>=1.9.0->openai) (0.6.0)
+Requirement already satisfied: pydantic-core==2.16.3 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pydantic<3,>=1.9.0->openai) (2.16.3)
+Requirement already satisfied: colorama in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from tqdm>4->openai) (0.4.6)
+Downloading openai-1.17.0-py3-none-any.whl (268 kB)
+   ---------------------------------------- 268.3/268.3 kB 1.8 MB/s eta 0:00:00
+Installing collected packages: openai
+  Attempting uninstall: openai
+    Found existing installation: openai 1.16.2
+    Uninstalling openai-1.16.2:
+      Successfully uninstalled openai-1.16.2
+Successfully installed openai-1.17.0
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install --upgrade --quiet  llama-cpp-python
+  error: subprocess-exited-with-error
+
+  × Building wheel for llama-cpp-python (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [20 lines of output]
+      *** scikit-build-core 0.8.2 using CMake 3.29.1 (wheel)
+      *** Configuring CMake...
+      2024-04-11 00:30:21,511 - scikit_build_core - WARNING - Can't find a Python library, got libdir=None, ldlibrary=None, multiarch=None, masd=None
+      loading initial cache file C:\Users\PIETRO~1\AppData\Local\Temp\tmpryyo5ck0\build\CMakeInit.txt
+      -- Building for: NMake Makefiles
+      CMake Error at CMakeLists.txt:3 (project):
+        Running
+
+         'nmake' '-?'
+
+        failed with:
+
+         no such file or directory
+
+
+      CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+      CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+      -- Configuring incomplete, errors occurred!
+
+      *** CMake configuration failed
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for llama-cpp-python
+ERROR: Could not build wheels for llama-cpp-python, which is required to install pyproject.toml-based projects
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install --upgrade --force-reinstall llama-cpp-python --no-cache-dir
+Collecting llama-cpp-python
+  Downloading llama_cpp_python-0.2.61.tar.gz (37.4 MB)
+     ---------------------------------------- 37.4/37.4 MB 3.9 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting typing-extensions>=4.5.0 (from llama-cpp-python)
+  Downloading typing_extensions-4.11.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting numpy>=1.20.0 (from llama-cpp-python)
+  Downloading numpy-1.26.4-cp312-cp312-win_amd64.whl.metadata (61 kB)
+     ---------------------------------------- 61.0/61.0 kB ? eta 0:00:00
+Collecting diskcache>=5.6.1 (from llama-cpp-python)
+  Downloading diskcache-5.6.3-py3-none-any.whl.metadata (20 kB)
+Collecting jinja2>=2.11.3 (from llama-cpp-python)
+  Downloading Jinja2-3.1.3-py3-none-any.whl.metadata (3.3 kB)
+Collecting MarkupSafe>=2.0 (from jinja2>=2.11.3->llama-cpp-python)
+  Downloading MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl.metadata (3.1 kB)
+Downloading diskcache-5.6.3-py3-none-any.whl (45 kB)
+   ---------------------------------------- 45.5/45.5 kB ? eta 0:00:00
+Downloading Jinja2-3.1.3-py3-none-any.whl (133 kB)
+   ---------------------------------------- 133.2/133.2 kB 3.8 MB/s eta 0:00:00
+Downloading numpy-1.26.4-cp312-cp312-win_amd64.whl (15.5 MB)
+   ---------------------------------------- 15.5/15.5 MB 5.3 MB/s eta 0:00:00
+Downloading typing_extensions-4.11.0-py3-none-any.whl (34 kB)
+Downloading MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl (17 kB)
+Building wheels for collected packages: llama-cpp-python
+  Building wheel for llama-cpp-python (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+
+  × Building wheel for llama-cpp-python (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [20 lines of output]
+      *** scikit-build-core 0.8.2 using CMake 3.29.1 (wheel)
+      *** Configuring CMake...
+      2024-04-11 00:33:12,968 - scikit_build_core - WARNING - Can't find a Python library, got libdir=None, ldlibrary=None, multiarch=None, masd=None
+      loading initial cache file C:\Users\PIETRO~1\AppData\Local\Temp\tmp0mee5d83\build\CMakeInit.txt
+      -- Building for: NMake Makefiles
+      CMake Error at CMakeLists.txt:3 (project):
+        Running
+
+         'nmake' '-?'
+
+        failed with:
+
+         no such file or directory
+
+
+      CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+      CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+      -- Configuring incomplete, errors occurred!
+
+      *** CMake configuration failed
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for llama-cpp-python
+Failed to build llama-cpp-python
+ERROR: Could not build wheels for llama-cpp-python, which is required to install pyproject.toml-based projects
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install packages
+Requirement already satisfied: packages in c:\users\pietro lettig\pyenv\venv\lib\site-packages (0.1.1)
+Requirement already satisfied: cached_property<2.0.0,>=1.5.1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from packages) (1.5.2)
+Requirement already satisfied: click<8.0,>=7.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from packages) (7.1.2)
+Requirement already satisfied: lxml<5.0.0,>=4.4.2 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from packages) (4.9.4)
+Requirement already satisfied: pymongo<4.0.0,>=3.10.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from packages) (3.13.0)
+Requirement already satisfied: redis<4.0.0,>=3.3.11 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from packages) (3.5.3)
+Requirement already satisfied: requests<3.0.0,>=2.22.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from packages) (2.31.0)
+Requirement already satisfied: requests-cache<0.6.0,>=0.5.2 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from packages) (0.5.2)
+Requirement already satisfied: tqdm<5.0.0,>=4.40.2 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from packages) (4.66.2)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0,>=2.22.0->packages) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0,>=2.22.0->packages) (3.6)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0,>=2.22.0->packages) (2.2.1)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from requests<3.0.0,>=2.22.0->packages) (2024.2.2)
+Requirement already satisfied: colorama in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from tqdm<5.0.0,>=4.40.2->packages) (0.4.6)
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip list
+Package                       Version
+----------------------------- -----------
+absl-py                       2.1.0
+aiohttp                       3.9.3
+aiosignal                     1.3.1
+annotated-types               0.6.0
+anyio                         4.3.0
+astunparse                    1.6.3
+attrs                         23.2.0
+cached-property               1.5.2
+cachetools                    5.3.3
+certifi                       2024.2.2
+cffi                          1.16.0
+charset-normalizer            3.3.2
+click                         7.1.2
+colorama                      0.4.6
+dataclasses-json              0.6.4
+distro                        1.9.0
+dnspython                     2.6.1
+docstring_parser              0.16
+elastic-transport             8.12.0
+elasticsearch                 8.12.1
+elasticsearch-dsl             8.12.0
+filelock                      3.13.3
+flatbuffers                   24.3.25
+frozenlist                    1.4.1
+fsspec                        2024.3.1
+gast                          0.5.4
+gevent                        24.2.1
+google-api-core               2.18.0
+google-auth                   2.29.0
+google-cloud-aiplatform       1.47.0
+google-cloud-bigquery         3.20.1
+google-cloud-core             2.4.1
+google-cloud-resource-manager 1.12.3
+google-cloud-storage          2.16.0
+google-crc32c                 1.5.0
+google-pasta                  0.2.0
+google-resumable-media        2.7.0
+googleapis-common-protos      1.63.0
+graphviz                      0.20.3
+greenlet                      3.0.3
+grequests                     0.7.0
+grpc-google-iam-v1            0.13.0
+grpcio                        1.62.1
+grpcio-status                 1.62.1
+h11                           0.14.0
+h5py                          3.10.0
+hf_transfer                   0.1.6
+httpcore                      1.0.4
+httpx                         0.27.0
+huggingface_hub               0.23.0.dev0
+idna                          3.6
+inquirerpy                    0.3.4
+jackal                        0.6.7
+Jinja2                        3.1.3
+jsonpatch                     1.33
+jsonpointer                   2.4
+jsonschema                    4.21.1
+jsonschema-specifications     2023.12.1
+keras                         3.1.1
+langchain                     0.1.14
+langchain-community           0.0.31
+langchain-core                0.1.40
+langchain-text-splitters      0.0.1
+langsmith                     0.1.40
+libclang                      18.1.1
+Library                       0.0.0
+lxml                          4.9.4
+Markdown                      3.6
+markdown-it-py                3.0.0
+MarkupSafe                    2.1.5
+marshmallow                   3.21.1
+mdurl                         0.1.2
+ml-dtypes                     0.3.2
+mpmath                        1.3.0
+multidict                     6.0.5
+mypy-extensions               1.0.0
+namex                         0.0.7
+networkx                      3.2.1
+numpy                         1.26.4
+openai                        1.17.0
+opt-einsum                    3.3.0
+optree                        0.11.0
+orjson                        3.10.0
+packages                      0.1.1
+packaging                     23.2
+pfzy                          0.3.4
+pip                           24.0
+prompt-toolkit                3.0.43
+proto-plus                    1.23.0
+protobuf                      4.25.3
+pyasn1                        0.6.0
+pyasn1_modules                0.4.0
+pycparser                     2.21
+pydantic                      2.6.4
+pydantic_core                 2.16.3
+pydot                         2.0.0
+Pygments                      2.17.2
+pymongo                       3.13.0
+pyparsing                     3.1.2
+pypi                          2.1
+pyproject-toml                0.0.10
+python-dateutil               2.9.0.post0
+python-libnmap                0.7.3
+PyYAML                        6.0.1
+redis                         3.5.3
+referencing                   0.34.0
+requests                      2.31.0
+requests-cache                0.5.2
+rich                          13.7.1
+rpds-py                       0.18.0
+rsa                           4.9
+safetensors                   0.4.2
+setuptools                    69.2.0
+shapely                       2.0.3
+six                           1.16.0
+sniffio                       1.3.1
+SQLAlchemy                    2.0.29
+sympy                         1.12
+tenacity                      8.2.3
+tensorboard                   2.16.2
+tensorboard-data-server       0.7.2
+tensorflow                    2.16.1
+tensorflow-intel              2.16.1
+termcolor                     2.4.0
+toml                          0.10.2
+torch                         2.2.2
+tqdm                          4.66.2
+typing_extensions             4.10.0
+typing-inspect                0.9.0
+urllib3                       2.2.1
+wcwidth                       0.2.13
+Werkzeug                      3.0.1
+wheel                         0.43.0
+wrapt                         1.16.0
+yarl                          1.9.4
+zope.event                    5.0
+zope.interface                6.2
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts>  .\\python.exe -m pip install pip==23.3.1
+Collecting pip==23.3.1
+  Using cached pip-23.3.1-py3-none-any.whl.metadata (3.5 kB)
+Using cached pip-23.3.1-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.0
+    Uninstalling pip-24.0:
+      Successfully uninstalled pip-24.0
+Successfully installed pip-23.3.1
+
+[notice] A new release of pip is available: 23.3.1 -> 24.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\pietro lettig\pyenv\venv\lib\site-packages (23.3.1)
+Collecting pip
+  Using cached pip-24.0-py3-none-any.whl.metadata (3.6 kB)
+Using cached pip-24.0-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.3.1
+    Uninstalling pip-23.3.1:
+      Successfully uninstalled pip-23.3.1
+Successfully installed pip-24.0
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install PyPI
+Requirement already satisfied: PyPI in c:\users\pietro lettig\pyenv\venv\lib\site-packages (2.1)
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts>  pip install --upgrade --quiet  llama-cpp-python
+  error: subprocess-exited-with-error
+
+  × Building wheel for llama-cpp-python (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [20 lines of output]
+      *** scikit-build-core 0.8.2 using CMake 3.29.1 (wheel)
+      *** Configuring CMake...
+      2024-04-11 00:42:06,098 - scikit_build_core - WARNING - Can't find a Python library, got libdir=None, ldlibrary=None, multiarch=None, masd=None
+      loading initial cache file C:\Users\PIETRO~1\AppData\Local\Temp\tmplh37du_1\build\CMakeInit.txt
+      -- Building for: NMake Makefiles
+      CMake Error at CMakeLists.txt:3 (project):
+        Running
+
+         'nmake' '-?'
+
+        failed with:
+
+         no such file or directory
+
+
+      CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+      CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+      -- Configuring incomplete, errors occurred!
+
+      *** CMake configuration failed
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for llama-cpp-python
+ERROR: Could not build wheels for llama-cpp-python, which is required to install pyproject.toml-based projects
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts>  pip install --upgrade --force-reinstall llama-cpp-python --no-cache-dir
+Collecting llama-cpp-python
+  Downloading llama_cpp_python-0.2.61.tar.gz (37.4 MB)
+     ---------------------------------------- 37.4/37.4 MB 3.9 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting typing-extensions>=4.5.0 (from llama-cpp-python)
+  Downloading typing_extensions-4.11.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting numpy>=1.20.0 (from llama-cpp-python)
+  Downloading numpy-1.26.4-cp312-cp312-win_amd64.whl.metadata (61 kB)
+     ---------------------------------------- 61.0/61.0 kB 3.2 MB/s eta 0:00:00
+Collecting diskcache>=5.6.1 (from llama-cpp-python)
+  Downloading diskcache-5.6.3-py3-none-any.whl.metadata (20 kB)
+Collecting jinja2>=2.11.3 (from llama-cpp-python)
+  Downloading Jinja2-3.1.3-py3-none-any.whl.metadata (3.3 kB)
+Collecting MarkupSafe>=2.0 (from jinja2>=2.11.3->llama-cpp-python)
+  Downloading MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl.metadata (3.1 kB)
+Downloading diskcache-5.6.3-py3-none-any.whl (45 kB)
+   ---------------------------------------- 45.5/45.5 kB ? eta 0:00:00
+Downloading Jinja2-3.1.3-py3-none-any.whl (133 kB)
+   ---------------------------------------- 133.2/133.2 kB 3.8 MB/s eta 0:00:00
+Downloading numpy-1.26.4-cp312-cp312-win_amd64.whl (15.5 MB)
+   ---------------------------------------- 15.5/15.5 MB 3.7 MB/s eta 0:00:00
+Downloading typing_extensions-4.11.0-py3-none-any.whl (34 kB)
+Downloading MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl (17 kB)
+Building wheels for collected packages: llama-cpp-python
+  Building wheel for llama-cpp-python (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+
+  × Building wheel for llama-cpp-python (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [20 lines of output]
+      *** scikit-build-core 0.8.2 using CMake 3.29.1 (wheel)
+      *** Configuring CMake...
+      2024-04-11 00:45:54,710 - scikit_build_core - WARNING - Can't find a Python library, got libdir=None, ldlibrary=None, multiarch=None, masd=None
+      loading initial cache file C:\Users\PIETRO~1\AppData\Local\Temp\tmpvzncaw91\build\CMakeInit.txt
+      -- Building for: NMake Makefiles
+      CMake Error at CMakeLists.txt:3 (project):
+        Running
+
+         'nmake' '-?'
+
+        failed with:
+
+         no such file or directory
+
+
+      CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+      CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+      -- Configuring incomplete, errors occurred!
+
+      *** CMake configuration failed
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for llama-cpp-python
+Failed to build llama-cpp-python
+ERROR: Could not build wheels for llama-cpp-python, which is required to install pyproject.toml-based projects
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install pyproject.toml
+Requirement already satisfied: pyproject.toml in c:\users\pietro lettig\pyenv\venv\lib\site-packages (0.0.10)
+Requirement already satisfied: setuptools>=42 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pyproject.toml) (69.2.0)
+Requirement already satisfied: wheel in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pyproject.toml) (0.43.0)
+Requirement already satisfied: toml in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pyproject.toml) (0.10.2)
+Requirement already satisfied: jsonschema in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from pyproject.toml) (4.21.1)
+Requirement already satisfied: attrs>=22.2.0 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from jsonschema->pyproject.toml) (23.2.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from jsonschema->pyproject.toml) (2023.12.1)
+Requirement already satisfied: referencing>=0.28.4 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from jsonschema->pyproject.toml) (0.34.0)
+Requirement already satisfied: rpds-py>=0.7.1 in c:\users\pietro lettig\pyenv\venv\lib\site-packages (from jsonschema->pyproject.toml) (0.18.0)
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts> pip install wheel
+Requirement already satisfied: wheel in c:\users\pietro lettig\pyenv\venv\lib\site-packages (0.43.0)
+(venv) PS C:\Users\Pietro Lettig\pyenv\venv\scripts>
